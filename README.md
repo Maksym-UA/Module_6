@@ -1,5 +1,6 @@
-Superloop and independent tasks
+# ESP32-S3 Superloop and independent tasks
 
+## Overview
 
 Manage several independent processes in one loop() without blocks via ESP32.
 
@@ -9,25 +10,51 @@ LED1 blinks every 200 ms
 LED2 blinks every 500 ms
 LED3 blinks every 1000 ms
 
-SETUP
-=====
+## Hardware
 
- 1. Install PlatformIO.
+| Component | Value / Details |
+|---|---|
+| MCU | ESP32-S3-DevKitC-1 |
+| LED1 | Blue |
+| LED2 | Yellow |
+| LED3 | Red |
 
- 2. Open the project in VS Code
 
- 3. To build the project, execute the command in the VS terminal
- ```
- $ pio run
- ```
- 4. To upload the project to the ESP32 run this command
- ```
- $ pio run -t upload
- ```
- 5. Monitor serial output at 115200 baud
- ```
- $ pio device monitor -b 115200
- ```
+## Build, Upload, Monitor
+
+Build:
+
+```bash
+pio run
+```
+
+Upload:
+
+```bash
+pio run -t upload
+```
+
+Serial monitor:
+
+```bash
+pio device monitor -b 115200
+```
+
+## Project Structure
+
+```text
+include/
+  application.h
+
+src/
+  application.cpp
+  CMakeLists.txt
+  main.cpp
+
+CMakeLists.txt
+platformio.ini
+sdkconfig.esp32-s3-devkitc-1
+```
 
 CONTACT
 =======
