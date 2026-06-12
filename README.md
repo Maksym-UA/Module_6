@@ -2,25 +2,32 @@
 
 ## Overview
 
-Manage several independent processes in one loop() without blocks via ESP32.
+This project runs three independent LED blink tasks on ESP32-S3 using FreeRTOS.
+Each LED has its own task and its own interval.
 
 Three leds on the board:
 
-LED1 blinks every 200 ms
-LED2 blinks every 500 ms
-LED3 blinks every 1000 ms
+LED1 blinks every 250 ms
+LED2 blinks every 700 ms
+LED3 blinks every 1300 ms
 
 ## Hardware
 
 | Component | Value / Details |
 |---|---|
 | MCU | ESP32-S3-DevKitC-1 |
-| LED1 | Blue |
-| LED2 | Yellow |
-| LED3 | Red |
+| LED1 | Red |
+| LED2 | Blue |
+| LED3 | Yellow |
 
 
-## Build, Upload, Monitor
+## Build and run
+
+Build firmware:
+
+```bash
+pio run
+```
 
 Build:
 
@@ -45,11 +52,13 @@ pio device monitor -b 115200
 ```text
 include/
   application.h
+  led.h
 
 src/
   application.cpp
-  CMakeLists.txt
+  led.cpp
   main.cpp
+  CMakeLists.txt
 
 CMakeLists.txt
 platformio.ini
