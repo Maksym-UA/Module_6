@@ -1,4 +1,4 @@
-# ESP32-S3 Superloop and independent tasks
+# ESP32-S3 Multitasking with FreeRTOS
 
 ## Overview
 
@@ -65,8 +65,6 @@ platformio.ini
 sdkconfig.esp32-s3-devkitc-1
 ```
 
-CONTACT
-=======
+## Contact
 
-Please send you feedback to
- max.savin3@gmail.com
+Feedback: max.savin3@gmail.com
